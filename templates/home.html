@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <div id="bookmarks" class="bookmarks">
+        <a href="#services">Наши услуги</a>
+        <a href="#bestsellers">Популярные цветы</a>
+    </div>
+    <h1>Добро пожаловать в наш магазин цветов!</h1>
+    <p>Мы предлагаем широкий ассортимент свежих цветов для любого случая.</p>
+    <img src="/static/main.jpeg" alt="Цветы">
+    <body>
+    
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <p>Мы предлагаем широкий спектр услуг для наших клиентов:</p>
+        <ul>
+            <li>Доставка цветов на дом</li>
+            <li>Оформление мероприятий</li>
+            <li>Создание букетов на заказ</li>
+            <li>Консультация флориста</li>
+        </ul>
+    </section>
+    
+    <section id="bestsellers">
+        <h2>Популярные цветы</h2>
+        <p>Вот некоторые из самых популярных цветов в нашем магазине:</p>
+
+        <figure>
+            <img class="list_img" src="/static/rose.png" alt="Розы">
+            <figcaption>Розы — символ любви и романтики. Идеально подходят для подарка.</figcaption>
+        </figure>
+
+        <figure>
+            <img class="list_img" src="/static/tulip.jpeg" alt="Тюльпаны">
+            <figcaption>Тюльпаны — яркие и нежные цветы, которые поднимают настроение.</figcaption>
+        </figure>
+
+        <figure>
+            <img class="list_img" src="/static/lilium.jpg" alt="Лилии">
+            <figcaption>Лилии — элегантные цветы с тонким ароматом. Подходят для торжественных случаев.</figcaption>
+        </figure>
+    </section>
+    
+    <div class="bookmarks">
+        <a href="#bookmarks">Вернуться к началу</a>
+    </div>
+{% endblock %}

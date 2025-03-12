@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Решение задачи{% endblock %}
+
+{% block content %}
+    <h1>Проверка числа на принадлежность промежутку</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="x">Введите число X:</label>
+        <input type="number" name="x" id="x" required>
+        <br><br>
+        
+        <label for="a">Введите начало промежутка (a):</label>
+        <input type="number" name="a" id="a" required>
+        <br><br>
+        
+        <label for="b">Введите конец промежутка (b):</label>
+        <input type="number" name="b" id="b" required>
+        <br><br>
+        
+        <button type="submit">Проверить</button>
+    </form>
+
+    {% if result is not None %}
+        <h2>Результат:</h2>
+        <p>Число X = {{ x }} {% if result %}принадлежит{% else %}не принадлежит{% endif %} промежутку [{{ a }}, {{ b }}].</p>
+    {% endif %}
+{% endblock %}

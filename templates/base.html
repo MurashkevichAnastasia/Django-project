@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FlowerShop{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo.png' %}" alt="Логотип магазина" width="50">
+                </a>
+            </li>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'catalog' %}">Каталог</a></li>
+            <li><a href="{% url 'home' %}#services">Услуги</a></li>
+            <li><a href="{% url 'task1' %}">Задача 1</a></li>
+            <li><a href="{% url 'task2' %}">Задача 2</a></li>
+            <li><a href="{% url 'about' %}">О нас</a></li>
+            <li><a href="https://www.hollandflower.cy/" target="_blank">Партнёры</a></li>
+            <li><a href="{% url 'requirements' %}">Создатели</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 FlowerShop. Все права защищены.</p>
+    </footer>
+</body>
+</html>
